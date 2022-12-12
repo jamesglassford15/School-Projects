@@ -1,0 +1,759 @@
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+1
+Account: 1-408-111-0222
+	TEXT: Are you going to the movie tonight?	Time:144840960, From:1-408-111-0222, To:1-650-111-0000
+	VOICE: Duration:120 (sec), Format: MPE	Time:144840960, From:1-408-111-0222, To:1-650-222-5555
+	TEXT: Mom said you go home by 11pm	Time:144840960, From:1-408-111-0222, To:1-650-666-9999
+	VOICE: Duration:231 (sec), Format: MP4	Time:144840960, From:1-408-111-0222, To:1-650-852-4774
+	MEDIA: Size:2.75 MB, Format: GIF	Time:144840960, From:1-408-111-0222, To:1-650-217-2003
+	MEDIA: Size:1.75 MB, Format: GIF	Time:144840960, From:1-408-111-0222, To:1-650-333-8888
+Total charges: $37.75
+-----------------------------------------------------------------------------
+Account: 1-408-222-0222
+	TEXT: Happy birthday!!!	Time:144840960, From:1-408-222-0222, To:1-650-333-6666
+	VOICE: Duration:670 (sec), Format: MOV	Time:144840960, From:1-408-222-0222, To:1-650-812-0011
+Total charges: $67.20
+-----------------------------------------------------------------------------
+Account: 1-408-333-0222
+	MEDIA: Size:2.5 MB, Format: JPEG	Time:144840960, From:1-408-333-0222, To:1-650-123-2000
+	TEXT: Java is fun to learn right	Time:144840960, From:1-408-333-0222, To:1-650-213-4444
+	MEDIA: Size:5.5 MB, Format: GIF	Time:144840960, From:1-408-333-0222, To:1-650-444-6666
+Total charges: $4.20
+-----------------------------------------------------------------------------
+Account: 1-408-444-0222
+	MEDIA: Size:3.8 MB, Format: JPG	Time:144840960, From:1-408-444-0222, To:1-650-567-2003
+Total charges: $1.90
+-----------------------------------------------------------------------------
+Account: 1-408-555-0222
+	TEXT: Can you close the backdoor?	Time:144840960, From:1-408-555-0222, To:1-650-321-3131
+	TEXT: I got to go now. Sorry!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	MEDIA: Size:3.05 MB, Format: PNG	Time:144840960, From:1-408-555-0222, To:1-650-287-2203
+	TEXT: Will come to your house this afternoon?	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Yeah!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	VOICE: Duration:172 (sec), Format: MOV	Time:144840960, From:1-408-555-0222, To:1-650-000-2828
+Total charges: $19.53
+-----------------------------------------------------------------------------
+Account: 1-408-666-0333
+	TEXT: I'm tired today.	Time:144840960, From:1-408-666-0333, To:1-650-555-4444
+	MEDIA: Size:3.5 MB, Format: GIF	Time:144840960, From:1-408-666-0333, To:1-650-123-2000
+Total charges: $1.95
+-----------------------------------------------------------------------------
+
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+2
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+1
+Account: 1-408-111-0222
+	TEXT: Are you going to the movie tonight?	Time:144840960, From:1-408-111-0222, To:1-650-111-0000
+	VOICE: Duration:120 (sec), Format: MPE	Time:144840960, From:1-408-111-0222, To:1-650-222-5555
+	TEXT: Mom said you go home by 11pm	Time:144840960, From:1-408-111-0222, To:1-650-666-9999
+	VOICE: Duration:231 (sec), Format: MP4	Time:144840960, From:1-408-111-0222, To:1-650-852-4774
+	MEDIA: Size:1.75 MB, Format: GIF	Time:144840960, From:1-408-111-0222, To:1-650-333-8888
+Total charges: $36.38
+-----------------------------------------------------------------------------
+Account: 1-408-222-0222
+	TEXT: Happy birthday!!!	Time:144840960, From:1-408-222-0222, To:1-650-333-6666
+	VOICE: Duration:670 (sec), Format: MOV	Time:144840960, From:1-408-222-0222, To:1-650-812-0011
+Total charges: $67.20
+-----------------------------------------------------------------------------
+Account: 1-408-333-0222
+	TEXT: Java is fun to learn right	Time:144840960, From:1-408-333-0222, To:1-650-213-4444
+	MEDIA: Size:5.5 MB, Format: GIF	Time:144840960, From:1-408-333-0222, To:1-650-444-6666
+Total charges: $2.95
+-----------------------------------------------------------------------------
+Account: 1-408-444-0222
+Total charges: $0.00
+-----------------------------------------------------------------------------
+Account: 1-408-555-0222
+	TEXT: Can you close the backdoor?	Time:144840960, From:1-408-555-0222, To:1-650-321-3131
+	TEXT: I got to go now. Sorry!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Will come to your house this afternoon?	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Yeah!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	VOICE: Duration:172 (sec), Format: MOV	Time:144840960, From:1-408-555-0222, To:1-650-000-2828
+Total charges: $18.00
+-----------------------------------------------------------------------------
+Account: 1-408-666-0333
+	TEXT: I'm tired today.	Time:144840960, From:1-408-666-0333, To:1-650-555-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+text
+What is the message?
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+text
+What is the message?
+0
+Comparing texts...
+YES
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+text
+What is the message?
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+text
+What is the message?
+1
+Comparing texts...
+NO
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+text
+What is the message?
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+voice
+How long is the voice message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+Comparing texts...
+NO
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+voice
+How long is the voice message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+voice
+How long is the voice message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+Comparing texts...
+YES
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+voice
+How long is the voice message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+voice
+How long is the voice message?
+0
+What format is the file? (JPG, PNG, etc)
+1
+Comparing texts...
+NO
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+voice
+How long is the voice message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+media
+What size is the media message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+Comparing texts...
+NO
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+media
+What size is the media message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+media
+What size is the media message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+Comparing texts...
+YES
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?.
+0
+What number was the message sent to?.
+0
+What was the charge? Please enter a double.
+0
+What kind of message is it? (Text, Voice, or Media)
+media
+What size is the media message?
+0
+What format is the file? (JPG, PNG, etc)
+0
+SECOND MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+0
+What number was the message sent from?
+0
+What number was the message sent to? 
+0
+What was the charge? Please enter a double. 
+0
+What kind of message is it? (Text, Voice, or Media
+media
+What size is the media message?
+0
+What format is the file? (JPG, PNG, etc)
+1
+Comparing texts...
+NO
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+3
+FIRST MESSAGE INFO:
+What time was the message sent? Please enter an integer.
+g
+Incorrect input! Please try again.
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+2
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+1
+Account: 1-408-111-0222
+	TEXT: Are you going to the movie tonight?	Time:144840960, From:1-408-111-0222, To:1-650-111-0000
+	VOICE: Duration:120 (sec), Format: MPE	Time:144840960, From:1-408-111-0222, To:1-650-222-5555
+	TEXT: Mom said you go home by 11pm	Time:144840960, From:1-408-111-0222, To:1-650-666-9999
+	VOICE: Duration:231 (sec), Format: MP4	Time:144840960, From:1-408-111-0222, To:1-650-852-4774
+Total charges: $35.50
+-----------------------------------------------------------------------------
+Account: 1-408-222-0222
+	TEXT: Happy birthday!!!	Time:144840960, From:1-408-222-0222, To:1-650-333-6666
+	VOICE: Duration:670 (sec), Format: MOV	Time:144840960, From:1-408-222-0222, To:1-650-812-0011
+Total charges: $67.20
+-----------------------------------------------------------------------------
+Account: 1-408-333-0222
+	TEXT: Java is fun to learn right	Time:144840960, From:1-408-333-0222, To:1-650-213-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+Account: 1-408-444-0222
+Total charges: $0.00
+-----------------------------------------------------------------------------
+Account: 1-408-555-0222
+	TEXT: Can you close the backdoor?	Time:144840960, From:1-408-555-0222, To:1-650-321-3131
+	TEXT: I got to go now. Sorry!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Will come to your house this afternoon?	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Yeah!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	VOICE: Duration:172 (sec), Format: MOV	Time:144840960, From:1-408-555-0222, To:1-650-000-2828
+Total charges: $18.00
+-----------------------------------------------------------------------------
+Account: 1-408-666-0333
+	TEXT: I'm tired today.	Time:144840960, From:1-408-666-0333, To:1-650-555-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+2
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+1
+Account: 1-408-111-0222
+	TEXT: Are you going to the movie tonight?	Time:144840960, From:1-408-111-0222, To:1-650-111-0000
+	VOICE: Duration:120 (sec), Format: MPE	Time:144840960, From:1-408-111-0222, To:1-650-222-5555
+	TEXT: Mom said you go home by 11pm	Time:144840960, From:1-408-111-0222, To:1-650-666-9999
+	VOICE: Duration:231 (sec), Format: MP4	Time:144840960, From:1-408-111-0222, To:1-650-852-4774
+Total charges: $35.50
+-----------------------------------------------------------------------------
+Account: 1-408-222-0222
+	TEXT: Happy birthday!!!	Time:144840960, From:1-408-222-0222, To:1-650-333-6666
+	VOICE: Duration:670 (sec), Format: MOV	Time:144840960, From:1-408-222-0222, To:1-650-812-0011
+Total charges: $67.20
+-----------------------------------------------------------------------------
+Account: 1-408-333-0222
+	TEXT: Java is fun to learn right	Time:144840960, From:1-408-333-0222, To:1-650-213-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+Account: 1-408-444-0222
+Total charges: $0.00
+-----------------------------------------------------------------------------
+Account: 1-408-555-0222
+	TEXT: Can you close the backdoor?	Time:144840960, From:1-408-555-0222, To:1-650-321-3131
+	TEXT: I got to go now. Sorry!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Will come to your house this afternoon?	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Yeah!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	VOICE: Duration:172 (sec), Format: MOV	Time:144840960, From:1-408-555-0222, To:1-650-000-2828
+Total charges: $18.00
+-----------------------------------------------------------------------------
+Account: 1-408-666-0333
+	TEXT: I'm tired today.	Time:144840960, From:1-408-666-0333, To:1-650-555-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+2
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+1
+Account: 1-408-111-0222
+	TEXT: Are you going to the movie tonight?	Time:144840960, From:1-408-111-0222, To:1-650-111-0000
+	VOICE: Duration:120 (sec), Format: MPE	Time:144840960, From:1-408-111-0222, To:1-650-222-5555
+	TEXT: Mom said you go home by 11pm	Time:144840960, From:1-408-111-0222, To:1-650-666-9999
+	VOICE: Duration:231 (sec), Format: MP4	Time:144840960, From:1-408-111-0222, To:1-650-852-4774
+Total charges: $35.50
+-----------------------------------------------------------------------------
+Account: 1-408-222-0222
+	TEXT: Happy birthday!!!	Time:144840960, From:1-408-222-0222, To:1-650-333-6666
+	VOICE: Duration:670 (sec), Format: MOV	Time:144840960, From:1-408-222-0222, To:1-650-812-0011
+Total charges: $67.20
+-----------------------------------------------------------------------------
+Account: 1-408-333-0222
+	TEXT: Java is fun to learn right	Time:144840960, From:1-408-333-0222, To:1-650-213-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+Account: 1-408-444-0222
+Total charges: $0.00
+-----------------------------------------------------------------------------
+Account: 1-408-555-0222
+	TEXT: Can you close the backdoor?	Time:144840960, From:1-408-555-0222, To:1-650-321-3131
+	TEXT: I got to go now. Sorry!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Will come to your house this afternoon?	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Yeah!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	VOICE: Duration:172 (sec), Format: MOV	Time:144840960, From:1-408-555-0222, To:1-650-000-2828
+Total charges: $18.00
+-----------------------------------------------------------------------------
+Account: 1-408-666-0333
+	TEXT: I'm tired today.	Time:144840960, From:1-408-666-0333, To:1-650-555-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+2
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+
+1
+Account: 1-408-111-0222
+	TEXT: Are you going to the movie tonight?	Time:144840960, From:1-408-111-0222, To:1-650-111-0000
+	VOICE: Duration:120 (sec), Format: MPE	Time:144840960, From:1-408-111-0222, To:1-650-222-5555
+	TEXT: Mom said you go home by 11pm	Time:144840960, From:1-408-111-0222, To:1-650-666-9999
+	VOICE: Duration:231 (sec), Format: MP4	Time:144840960, From:1-408-111-0222, To:1-650-852-4774
+Total charges: $35.50
+-----------------------------------------------------------------------------
+Account: 1-408-222-0222
+	TEXT: Happy birthday!!!	Time:144840960, From:1-408-222-0222, To:1-650-333-6666
+	VOICE: Duration:670 (sec), Format: MOV	Time:144840960, From:1-408-222-0222, To:1-650-812-0011
+Total charges: $67.20
+-----------------------------------------------------------------------------
+Account: 1-408-333-0222
+	TEXT: Java is fun to learn right	Time:144840960, From:1-408-333-0222, To:1-650-213-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+Account: 1-408-444-0222
+Total charges: $0.00
+-----------------------------------------------------------------------------
+Account: 1-408-555-0222
+	TEXT: Can you close the backdoor?	Time:144840960, From:1-408-555-0222, To:1-650-321-3131
+	TEXT: I got to go now. Sorry!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Will come to your house this afternoon?	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	TEXT: Yeah!	Time:144840960, From:1-408-555-0222, To:1-650-991-7801
+	VOICE: Duration:172 (sec), Format: MOV	Time:144840960, From:1-408-555-0222, To:1-650-000-2828
+Total charges: $18.00
+-----------------------------------------------------------------------------
+Account: 1-408-666-0333
+	TEXT: I'm tired today.	Time:144840960, From:1-408-666-0333, To:1-650-555-4444
+Total charges: $0.20
+-----------------------------------------------------------------------------
+
+
+
+	FOOTHILL WIRELESS at Santa Clara
+MESSAGE UTILIZATION AND ACCOUNT ADMIN
+1. List all accounts
+
+2. Erase a media message
+
+3. equals Test
+
+4. Quit
+
+Enter a choice(1-4): 
+
+

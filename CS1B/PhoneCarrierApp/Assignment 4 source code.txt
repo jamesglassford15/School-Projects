@@ -1,0 +1,731 @@
+//-------------------------------------------------------------------------------------
+//@version1.0 08/06/2020
+//@author James Glassford
+//File name: CreditCardTransactionAnalyzer.java
+//Program purpose: This program was created to handle transaction on a credit card
+
+//Revision History:
+// Date           Programmer        Change ID   Description
+// 07/29/2020     James Glassford   1           Implemented Item class and most of Message class
+// 07/30/2020     James Glassford   2           Finished implementing Message class (does not work as of right now, remember to fix), began work on Text
+// 07/31/2020     James Glassford   3           Finished Text, Voice, and Media classes, fixed Message class 
+// 08/01/2020     James Glassford   4           Began work on SmartCarrier class     
+// 08/03/2020     James Glassford   5           Finished everything in SmartCarrier class except equals function
+// 08/04/2020     James Glassford   6           Completed equals function, went back and fixed equals methods in prev. classes
+// 08/05/2020     James Glassford   7           Fixed a bug that caused the media deletion to not function properly, adjusted equals method in SmartCarrier as a result
+// 08/06/2020     James Glassford   8           Fixed bugs in equals method of SmartCarrier, final check to make sure program runs as intended
+//                                             
+//-------------------------------------------------------------------------------------
+
+import java.io.*;
+import java.nio.file.*;
+import java.nio.charset.*;
+import java.util.*;
+import java.util.Map.Entry;
+
+//-------------------------------------------------------------------------------------
+
+public class PhoneCarrierApp
+{
+   public static void main(String[] args)
+   {
+      SmartCarrier smartCarrier = new SmartCarrier("Santa Clara");
+      smartCarrier.init();
+      smartCarrier.run();
+   }
+}
+
+// -------------------------------------------------------------------------------------
+// leaving item class uncommented since it seems pretty self explanatory
+
+class Item
+{
+   private int time;
+   private String from;
+   private String to;
+   private double charge;
+
+   public Item()
+   {
+      time = 0;
+      from = "";
+      to = "";
+      charge = 0.0;
+   }
+
+   public Item(int time, String from, String to, double charge)
+   {
+      this.time = time;
+      this.from = from;
+      this.to = to;
+      this.charge = charge;
+   }
+
+   public int getTime()
+   {
+      return time;
+   }
+
+   public String getFrom()
+   {
+      return from;
+   }
+
+   public String getTo()
+   {
+      return to;
+   }
+
+   public double getCharge()
+   {
+      return charge;
+   }
+
+   public void setTime(int newTime)
+   {
+      time = newTime;
+   }
+
+   public void setFrom(String newFrom)
+   {
+      from = newFrom;
+   }
+
+   public void setTo(String newTo)
+   {
+      to = newTo;
+   }
+
+   public void SetCharge(double newCharge)
+   {
+      charge = newCharge;
+   }
+
+   public String toString()
+   {
+      String output = String.format("Time:%d, From:%s, To:%s", time, from, to, charge);
+      return output;
+   }
+
+   public boolean equals(Object other)
+   {
+      if (other instanceof Item)
+      {
+         return (this.getFrom().equals(((Item) other).getFrom()) && this.getTo().equals(((Item) other).getTo())
+               && this.getTime() == ((Item) other).getTime());
+      } else
+      {
+         return super.equals(other);
+      }
+   }
+}
+
+// -------------------------------------------------------------------------------------
+
+class Message<T> extends Item
+{
+   // initializing the T object
+   private T object;
+
+   public Message()
+   {
+      super();
+      object = null;
+   }
+
+   public Message(int time, String from, String to, double charge, T msg)
+   {
+      super(time, from, to, charge);
+      object = msg;
+   }
+
+   T getMessage()
+   {
+      return object;
+   }
+
+   public void setMessage(T message)
+   {
+      this.object = message;
+   }
+
+   public String toString()
+   {
+      return (object.toString() + super.toString());
+   }
+
+   // first checks the item's equal parameters (time, from, to, charge) and then
+   // checks to see if the object it from the message class and, if so, what sub
+   // class. This looks pretty messy, and it looks like it's looking for the same
+   // thing twice in each "if", but I could not get it to work with one or the
+   // either. "instanceof" broke option 3 and "== blank.class" broke option 2. I
+   // was not sure how else to fix it so I went with this.
+   public boolean equals(Object object)
+   {
+      if (super.equals(object))
+      {
+         if ((((Message<?>) object).getMessage()) instanceof Text || (((Message<?>) object).getMessage()) == Text.class)
+         {
+            return true;
+         }
+
+         else if ((((Message<?>) object).getMessage()) instanceof Media
+               || (((Message<?>) object).getMessage()) == Media.class)
+         {
+            return true;
+         } else if ((((Message<?>) object).getMessage()) instanceof Voice
+               || (((Message<?>) object).getMessage()) == Voice.class)
+         {
+            return true;
+         } else
+         {
+            return false;
+         }
+      } else
+      {
+         return false;
+      }
+   }
+
+}
+
+// -------------------------------------------------------------------------------------
+
+interface Chargeable
+{
+   public double charge();
+}
+
+// -------------------------------------------------------------------------------------
+// subclasses will also be uncommented since they were majority given to us
+
+class Text extends Message<Object> implements Chargeable
+{
+   private String content;
+
+   public Text()
+   {
+      content = "";
+   }
+
+   public Text(int time, String from, String to, double charge, String text, Object type)
+   {
+      super(time, from, to, charge, type);
+      content = text;
+   }
+
+   public String getContent()
+   {
+      return content;
+   }
+
+   public void setContent(String newContent)
+   {
+      content = newContent;
+   }
+
+   public String toString()
+   {
+      return "\tTEXT: " + content + "\t";
+   }
+
+   public boolean equals(Object object)
+   {
+      if (super.equals(object))
+      {
+         return (this.getContent().equals(((Text) object).getContent()));
+      } else
+      {
+         return false;
+      }
+   }
+
+   public double charge()
+   {
+      return 20.0;
+   }
+
+}
+
+class Media extends Message<Object> implements Chargeable
+{
+   private double size;
+   private String format;
+
+   public Media()
+   {
+      size = 0;
+      format = "";
+   }
+
+   public Media(int time, String from, String to, double charge, double size, String format, Object type)
+   {
+      super(time, from, to, charge, type);
+      this.size = size;
+      this.format = format;
+   }
+
+   public double getSize()
+   {
+      return size;
+   }
+
+   public String getFormat()
+   {
+      return format;
+   }
+
+   public void setSize(double newSize)
+   {
+      size = newSize;
+   }
+
+   public void setFormat(String newFormat)
+   {
+      format = newFormat;
+   }
+
+   public String toString()
+   {
+      return new String("\tMEDIA: Size:" + size + " MB, Format: " + format + "\t");
+   }
+
+   public boolean equals(Object object)
+   {
+      if (super.equals(object))
+      {
+         return (this.getSize() == ((Media) object).getSize() && this.getFormat().equals(((Media) object).getFormat()));
+      } else
+      {
+         return false;
+      }
+   }
+
+   public double charge()
+   {
+      return size * 50;
+   }
+
+}
+
+class Voice extends Message<Object> implements Chargeable
+{
+   private int duration; // in seconds
+   private String format;
+
+   public Voice()
+   {
+      duration = 0;
+      format = "";
+   }
+
+   public Voice(int time, String from, String to, double charge, int duration, String format, Object type)
+   {
+      super(time, from, to, charge, type);
+      this.duration = duration;
+      this.format = format;
+   }
+
+   public int getDuration()
+   {
+      return duration;
+   }
+
+   public String getFormat()
+   {
+      return format;
+   }
+
+   public void setDuration(int newDuration)
+   {
+      duration = newDuration;
+   }
+
+   public void setFormat(String newFormat)
+   {
+      format = newFormat;
+   }
+
+   public String toString()
+   {
+      return new String("\tVOICE: Duration:" + duration + " (sec), Format: " + format + "\t");
+   }
+
+   public boolean equals(Object object)
+   {
+      if (super.equals(object))
+      {
+         return (this.getDuration() == ((Voice) object).getDuration()
+               && this.getFormat().contentEquals(((Voice) object).getFormat()));
+      } else
+      {
+         return false;
+      }
+   }
+
+   public double charge()
+   {
+      return duration * 10;
+   }
+}
+
+// -------------------------------------------------------------------------------------
+
+class SmartCarrier
+{
+   // initializations of the treemap, arraylist, and location of the file
+   private TreeMap<String, ArrayList<Item>> phoneNumbers = null;
+   String location;
+   private final static String fileLocation = "C:\\Users\\james\\eclipse-workspace\\PhoneCarrierApp\\texts.txt";
+
+   public SmartCarrier()
+   {
+      phoneNumbers = new TreeMap<String, ArrayList<Item>>();
+      location = "";
+   }
+
+   public SmartCarrier(String location)
+   {
+      phoneNumbers = new TreeMap<String, ArrayList<Item>>();
+      this.location = location;
+   }
+
+   // this first takes each line of the text file and parses it to find what kind
+   // of message it is. Based on that result, it creates a new *blank* object, and
+   // creates a new message object to store in the arraylist that utilizes the
+   // *blank* object made. Then, it checks to see if the phone number has been used
+   // as a
+   // key before. If it has, the program simply adds the entry to the given
+   // arraylist.
+   // If not, it creates one and then adds the message to the arraylist.
+   public void init()
+   {
+      Path textFile = Paths.get(fileLocation);
+      BufferedReader reader = null;
+      String line = null;
+      try
+      {
+         reader = Files.newBufferedReader(textFile, StandardCharsets.US_ASCII);
+         while ((line = reader.readLine()) != null)
+         {
+            String[] input = line.split(",");
+            int time = Integer.parseInt(input[1]);
+            switch (input[0].toString())
+            {
+            case "T":
+               Text textObject = new Text(time, input[2], input[3], 0.0, input[4], Text.class);
+               textObject.SetCharge(textObject.charge());
+               Message<Text> tMessageObject = new Message<Text>(time, input[2], input[3], textObject.getCharge(),
+                     textObject);
+               Item tItemObject = tMessageObject;
+               if (phoneNumbers.containsKey(input[2]))
+               {
+                  phoneNumbers.get(input[2]).add(tItemObject);
+               } else
+               {
+                  ArrayList<Item> textArray = new ArrayList<Item>();
+                  textArray.add(tItemObject);
+                  phoneNumbers.put(input[2], textArray);
+               }
+               break;
+            case "V":
+               Voice voiceObject = new Voice(time, input[2], input[3], 0.0, Integer.parseInt(input[4]), input[5],
+                     Voice.class);
+               voiceObject.SetCharge(voiceObject.charge());
+               Message<Voice> vMessageObject = new Message<Voice>(time, input[2], input[3], voiceObject.getCharge(),
+                     voiceObject);
+               Item vItemObject = vMessageObject;
+               if (phoneNumbers.containsKey(input[2]))
+               {
+                  phoneNumbers.get(input[2]).add(vItemObject);
+               } else
+               {
+                  ArrayList<Item> voiceArray = new ArrayList<Item>();
+                  voiceArray.add(vItemObject);
+                  phoneNumbers.put(input[2], voiceArray);
+               }
+               break;
+            case "M":
+               Media mediaObject = new Media(time, input[2], input[3], 0.0, Double.parseDouble(input[4]), input[5],
+                     Media.class);
+               mediaObject.SetCharge(mediaObject.charge());
+               Message<Media> mMessageObject = new Message<Media>(time, input[2], input[3], mediaObject.getCharge(),
+                     mediaObject);
+               Item mItemObject = mMessageObject;
+               if (phoneNumbers.containsKey(input[2]))
+               {
+                  phoneNumbers.get(input[2]).add(mItemObject);
+               } else
+               {
+                  ArrayList<Item> mediaArray = new ArrayList<Item>();
+                  mediaArray.add(mItemObject);
+                  phoneNumbers.put(input[2], mediaArray);
+               }
+               break;
+            }
+         }
+      } catch (IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+
+   // this goes through each arraylist and lists each account nice and neatly while
+   // also tallying up the total charges of each.
+   private void listAccounts()
+   {
+      boolean completedSearch = false;
+      ArrayList<String> completedAccounts = new ArrayList<String>();
+      do
+      {
+         for (Entry<String, ArrayList<Item>> entry : phoneNumbers.entrySet())
+         {
+            if (entry != null)
+            {
+               if (!completedAccounts.contains(entry.getKey()))
+               {
+                  System.out.println("Account: " + entry.getKey());
+                  double totalCharges = 0.0;
+                  Message<?> element = null;
+                  for (int index = 0; index < entry.getValue().size(); ++index)
+                  {
+                     element = (Message<?>) entry.getValue().get(index);
+                     System.out.println(element.toString());
+                     totalCharges += element.getCharge();
+                  }
+                  completedAccounts.add(entry.getKey());
+                  System.out.println(String.format("Total charges: $%.02f", totalCharges / 100));
+                  System.out.println("-----------------------------------------------------------------------------");
+               }
+
+            }
+            completedSearch = true;
+         }
+
+      } while (!completedSearch);
+      System.out.println("\n\n");
+   }
+
+   // this checks to see if the element of the list is of a media type - if it is,
+   // it deletes it and breaks the loop.
+   private void eraseMedia(List<? extends Item> list)
+   {
+      for (Item element : list)
+      {
+         if ((((Message<?>) element).getMessage().getClass() == Media.class))
+         {
+            list.remove((Item) element);
+            break;
+         }
+      }
+   }
+
+   // a method i created inspired by the one from the CarDealerApp assignment that
+   // just prints the menu and returns the choice of the user
+   private int menu()
+   {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+      System.out.println("\tFOOTHILL WIRELESS at " + location);
+      System.out.println("MESSAGE UTILIZATION AND ACCOUNT ADMIN");
+      System.out.println("1. List all accounts\n");
+      System.out.println("2. Erase a media message\n");
+      System.out.println("3. equals Test\n");
+      System.out.println("4. Quit\n");
+      System.out.println("Enter a choice(1-4): \n\n");
+      int choice = 0;
+      try
+      {
+         choice = Integer.parseInt(reader.readLine());
+      } catch (IOException e)
+      {
+         e.printStackTrace();
+      } catch (NumberFormatException i)
+      {
+         System.out.println("Error! Please input an integer, not a string.");
+      }
+      return choice;
+   }
+
+   // main run method that does certain actions based on the input from menu()
+   public void run()
+   {
+      int choice = 0;
+      do
+      {
+         switch (choice = menu())
+         {
+         case 1:
+            listAccounts();
+            break;
+         case 2:
+            for (Entry<String, ArrayList<Item>> entry : phoneNumbers.entrySet())
+            {
+               eraseMedia(entry.getValue());
+            }
+            break;
+         case 3:
+            equalsTest();
+            break;
+         case 4:
+            break;
+         }
+      } while (choice != 4);
+   }
+
+   // takes input from the user for the time, from, to, charge, message type, and
+   // specific message info for two different messages. Compares the results as
+   // message to find out if they are equal.
+   public void equalsTest()
+   {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+      int timeOne = 0;
+      String fromOne = "";
+      String toOne = "";
+      double chargeOne = 0.0;
+      int timeTwo = 0;
+      String fromTwo = null;
+      String toTwo = null;
+      double chargeTwo = 0.0;
+      String objectOne = "";
+      String objectTwo = "";
+      String format = "";
+      String msg = "";
+      double size = 0.0;
+      int duration = 0;
+      Message<? extends Item> messageOne = null;
+      Message<? extends Item> messageTwo = null;
+      try
+      {
+         System.out.println("FIRST MESSAGE INFO:");
+         System.out.println("What time was the message sent? Please enter an integer.");
+         try
+         {
+            timeOne = Integer.parseInt(reader.readLine());
+         } catch (NumberFormatException e)
+         {
+            System.out.println("Incorrect input! Please try again.\n\n");
+            equalsTest();
+         }
+         System.out.println("What number was the message sent from?.");
+         fromOne = reader.readLine();
+         System.out.println("What number was the message sent to?.");
+         toOne = reader.readLine();
+         System.out.println("What was the charge? Please enter a double.");
+         try
+         {
+            chargeOne = Double.parseDouble(reader.readLine());
+         } catch (NumberFormatException e)
+         {
+            System.out.println("Incorrect input! Please try again. \n\n");
+            equalsTest();
+         }
+         System.out.println("What kind of message is it? (Text, Voice, or Media)");
+         objectOne = reader.readLine();
+
+         switch (objectOne.toLowerCase())
+         {
+         case "text":
+            System.out.println("What is the message?");
+            msg = reader.readLine();
+            Text textOne = new Text(timeOne, fromOne, toOne, chargeOne, msg, Text.class);
+            messageOne = new Message<Text>(timeOne, fromOne, toOne, chargeOne, textOne);
+            break;
+
+         case "media":
+            System.out.println("What size is the media message?");
+            size = Double.parseDouble(reader.readLine());
+            System.out.println("What format is the file? (JPG, PNG, etc)");
+            format = reader.readLine();
+            Media mediaOne = new Media(timeOne, fromOne, toOne, chargeOne, size, format, Media.class);
+            messageOne = new Message<Media>(timeOne, fromOne, toOne, chargeOne, mediaOne);
+            break;
+
+         case "voice":
+            System.out.println("How long is the voice message?");
+            duration = Integer.parseInt(reader.readLine());
+            System.out.println("What format is the file? (JPG, PNG, etc)");
+            format = reader.readLine();
+            Voice voiceOne = new Voice(timeOne, fromOne, toOne, chargeOne, duration, format, Voice.class);
+            messageOne = new Message<Voice>(timeOne, fromOne, toOne, chargeOne, voiceOne);
+            break;
+         default:
+            System.out.println("Invalid selection!!");
+            equalsTest();
+         }
+         System.out.println("SECOND MESSAGE INFO:");
+         System.out.println("What time was the message sent? Please enter an integer.");
+         try
+         {
+            timeTwo = Integer.parseInt(reader.readLine());
+         } catch (NumberFormatException e)
+         {
+            System.out.println("Incorrect input! Please try again.\n\n");
+            equalsTest();
+         }
+         System.out.println("What number was the message sent from?");
+         fromTwo = reader.readLine();
+         System.out.println("What number was the message sent to? ");
+         toTwo = reader.readLine();
+         System.out.println("What was the charge? Please enter a double. ");
+         try
+         {
+            chargeTwo = Double.parseDouble(reader.readLine());
+         } catch (NumberFormatException e)
+         {
+            System.out.println("Incorrect input! Please try again. \n\n");
+            equalsTest();
+         }
+         System.out.println("What kind of message is it? (Text, Voice, or Media");
+         objectTwo = reader.readLine();
+
+         switch (objectTwo.toLowerCase())
+         {
+         case "text":
+            System.out.println("What is the message?");
+            msg = reader.readLine();
+            Text textTwo = new Text(timeTwo, fromTwo, toTwo, chargeTwo, msg, Text.class);
+            messageTwo = new Message<Text>(timeTwo, fromTwo, toTwo, chargeTwo, textTwo);
+            break;
+         case "media":
+            System.out.println("What size is the media message?");
+            size = Double.parseDouble(reader.readLine());
+            System.out.println("What format is the file? (JPG, PNG, etc)");
+            format = reader.readLine();
+            Media mediaTwo = new Media(timeTwo, fromTwo, toTwo, chargeTwo, size, format, Media.class);
+            messageTwo = new Message<Media>(timeTwo, fromTwo, toTwo, chargeTwo, mediaTwo);
+            break;
+         case "voice":
+            System.out.println("How long is the voice message?");
+            duration = Integer.parseInt(reader.readLine());
+            System.out.println("What format is the file? (JPG, PNG, etc)");
+            format = reader.readLine();
+            Voice voiceTwo = new Voice(timeTwo, fromTwo, toTwo, chargeTwo, duration, format, Voice.class);
+            messageTwo = new Message<Voice>(timeTwo, fromTwo, toTwo, chargeTwo, voiceTwo);
+            break;
+         default:
+            System.out.println("invalid selection!!!");
+            equalsTest();
+         }
+
+         System.out.println("Comparing texts...");
+         if (((Object) messageOne.getMessage().toString()).equals((Object) messageTwo.getMessage().toString()))
+         {
+            if (messageOne.getMessage().equals(messageTwo.getMessage()))
+            {
+               System.out.println("YES");
+            } else
+            {
+               System.out.println("NO");
+            }
+         } else
+         {
+            System.out.println("NO");
+         }
+      } catch (IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+
+}
